@@ -18,7 +18,7 @@ class FileEventHandler(FileSystemEventHandler):
             for line in lines:
                 producer.send(topic, value=line.encode())
 
-# Watchdog observer to monitor the directory for file events
+# Watchdog observer to monitor the directory for all file events
 observer = Observer()
 event_handler = FileEventHandler()
 directory_to_watch = 'C:/Users/Abanoub/Desktop/bigdata/project/Section 7/project14/data'  
